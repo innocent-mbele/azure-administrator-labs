@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this project i demonstrated Microsoft Entra ID identity and access administration within an Azure tenant. The implementation involved inspecting the tenant configuration, verifying the Global Administrator role, creating an internal user account, configuring user attributes and creating a security group with an assigned owner and member.
+I demonstrated Microsoft Entra ID identity and access administration within an Azure tenant. The implementation involved inspecting the tenant configuration, verifying the Global Administrator role, creating an internal user account, configuring user attributes and creating a security group with an assigned owner and member.
 
 I also reviewed sign-in logs and directory audit logs to examine user provisioning and group membership activities. I inspected the audit records to verify the initiating administrator, affected directory objects, modified properties and operation status.
 
