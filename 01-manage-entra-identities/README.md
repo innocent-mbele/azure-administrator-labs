@@ -1,23 +1,20 @@
-@'
-# Microsoft Entra ID — Users, Groups and Audit Logs
+# Microsoft Entra ID Identity Management
 
 ## Overview
 
-This lab demonstrates the administration of users and security groups in the default Microsoft Entra ID tenant.
+This project demonstrates Microsoft Entra ID identity and access administration within an Azure tenant. The implementation involved inspecting the tenant configuration, verifying the Global Administrator role, creating an internal user account, configuring user attributes, and creating a security group with an assigned owner and member.
 
-A sample employee account, Sibusiso Ndlovu, was created with organisational profile information and added to the IT-Cloud-Ops security group.
+The lab also involved reviewing sign-in logs and directory audit logs to examine user provisioning and group membership activities. The audit records were inspected to verify the initiating administrator, affected directory objects, modified properties and operation status.
 
-The lab also examines Microsoft Entra ID directory roles, sign-in logs and audit logs. Audit events were reviewed to identify the initiating administrator, affected target objects, modified properties and operation status.
-
-Group membership was subsequently verified in the Azure portal.
+---
 
 ## Screenshots
 
 ### Default Tenant Overview
 
-Shows the Default Directory tenant overview, including its tenant information and Microsoft Entra ID Free licence.
+Shows the Default Directory tenant overview and its Microsoft Entra ID configuration.
 
-![Default Tenant Overview](screenshots/01-entra-tenant-overview)
+![Default Tenant Overview](screenshots/01-entra-tenant-overview.png)
 
 ---
 
@@ -25,69 +22,69 @@ Shows the Default Directory tenant overview, including its tenant information an
 
 Shows the Global Administrator directory role assigned to the administrator account.
 
-![Global Administrator Role](screenshots/02-entra-global-administrator-role)
+![Global Administrator Role](screenshots/02-entra-global-administrator-role.png)
 
 ---
 
 ### User Created
 
-Shows the Sibusiso Ndlovu user account created in Microsoft Entra ID.
+Shows the Sibusiso Ndlovu internal user account successfully created in Microsoft Entra ID.
 
-![User Created](screenshots/03-entra-user-created)
+![User Created](screenshots/03-entra-user-created.png)
 
 ---
 
 ### Security Group Created
 
-Shows the IT-Cloud-Ops security group and its configuration.
+Shows the IT-Cloud-Ops security group configured with assigned membership, an owner and a member.
 
-![Security Group Created](screenshots/04-entra-security-group-created)
-
----
-
-### Audit Logs
-
-Shows the tenant audit log records generated during the user and group administration activities.
-
-![Audit Logs](screenshots/05-entra-audit-logs)
+![Security Group Created](screenshots/04-entra-security-group-created.png)
 
 ---
 
-### User Creation — Audit Targets
+### Directory Audit Logs
 
-Shows the target information recorded for the successful Add user audit event.
+Shows the directory audit log entries generated during user provisioning and security group administration.
 
-![User Creation Audit Targets](screenshots/06-entra-audit-user-creation-targets)
-
----
-
-### User Creation — Modified Properties
-
-Shows the properties recorded as changed during user creation, including account status and employee profile attributes.
-
-![User Creation Modified Properties](screenshots/07-entra-audit-user-creation-modified-properties)
+![Directory Audit Logs](screenshots/05-entra-audit-logs.png)
 
 ---
 
-### Group Membership — Audit Targets
+### User Creation Audit - Target Resources
 
-Shows the user and security group identified as targets in the successful Add member to group audit event.
+Shows the user object identified as the target of the successful Add user audit operation.
 
-![Group Membership Audit Targets](screenshots/08-entra-audit-group-membership-targets)
+![User Creation Audit Targets](screenshots/06-entra-audit-user-creation-targets.png)
 
 ---
 
-### Group Membership — Modified Properties
+### User Creation Audit - Modified Properties
 
-Shows the group properties recorded in the audit event, including the group Object ID and display name.
+Shows the user attributes recorded in the Modified Properties section of the Add user audit event.
 
-![Group Membership Modified Properties](screenshots/09-entra-audit-group-membership-modified-properties)
+![User Creation Modified Properties](screenshots/07-entra-audit-user-creation-modified-properties.png)
+
+---
+
+### Group Membership Audit - Target Resources
+
+Shows the user and security group identified as target resources in the Add member to group audit event.
+
+![Group Membership Audit Targets](screenshots/08-entra-audit-group-membership-targets.png)
+
+---
+
+### Group Membership Audit - Modified Properties
+
+Shows the group object ID and display name recorded in the Modified Properties section of the group membership audit event.
+
+![Group Membership Modified Properties](screenshots/09-entra-audit-group-membership-modified-properties.png)
 
 ---
 
 ### Group Membership Verified
 
-Shows Sibusiso Ndlovu listed as the member of the IT-Cloud-Ops security group, confirming the membership operation.
+Shows the IT-Cloud-Ops group membership view confirming that Sibusiso Ndlovu was successfully added as a member.
 
-![Group Membership Verified](screenshots/10-entra-group-membership-verified)
-'@ | Set-Content -Path "README.md" -Encoding utf8
+![Group Membership Verified](screenshots/10-entra-group-membership-verified.png)
+
