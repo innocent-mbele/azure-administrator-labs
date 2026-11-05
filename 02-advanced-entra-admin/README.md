@@ -1,4 +1,4 @@
-# Advanced Microsoft Entra ID Administration
+# Advanced Microsoft Entra ID Admin
 
 ## Overview
 
