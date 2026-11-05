@@ -2,15 +2,9 @@
 
 ## Overview
 
-In this project I explored advanced Microsoft Entra ID administration within an Azure tenant. The practical work involved inspecting device join, registration and security settings, performing bulk user creation, and managing security group membership.
+I explored advanced Microsoft Entra ID admin within an Azure tenant. This involved inspecting device join, registration and security settings, performing bulk user creation and managing security group membership. I created seven internal user accounts using the Microsoft Entra ID bulk user creation feature. Encountered a minor challenge when working with the CSV bulk operation as the portal did not provide clear confirmation of the operation results.
 
-I created seven internal user accounts using the Microsoft Entra ID bulk user creation feature. I encountered a minor challenge when working with the CSV bulk operation, as the portal did not provide clear confirmation of the operation results.
-
-To address this, I used Microsoft Graph PowerShell, following the guidance in Microsoft's documentation on [Bulk operations service limitations](https://learn.microsoft.com/en-us/entra/fundamentals/bulk-operations-service-limitations?WT.mc_id=Portal-Microsoft_AAD_IAM). I established a delegated Graph connection, retrieved and verified the seven user accounts, and exported their profile information to CSV.
-
-I also created a separate security group, IT-Cloud-Ops-Automation, using Microsoft Graph PowerShell and automated the addition of all seven users. I independently retrieved the group membership to verify that all seven accounts had been added successfully.
-
-This practical exercise demonstrated both portal-based administration and PowerShell automation for managing Microsoft Entra ID identities and groups.
+To fix this I then used Microsoft Graph PowerShell by following the guidance in Microsoft's documentation on Bulk operations service limitations from https://learn.microsoft.com/en-us/entra/fundamentals/bulk-operations-service-limitations?WT.mc_id=Portal-Microsoft_AAD_IAM. I then established a delegated Graph connection, retrieved and verified all the 7 user accounts and exported their profile information to CSV. I also created a separate security group and named it IT-Cloud-Ops-Automation using Microsoft Graph PowerShell and automated the addition of all 7 users. I independently retrieved the group membership to verify that all 7 accounts had been added successfully.
 
 ---
 
