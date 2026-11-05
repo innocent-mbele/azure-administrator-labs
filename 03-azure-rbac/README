@@ -1,0 +1,45 @@
+# Azure Role-Based Access Control (RBAC)
+
+## Overview
+
+In this project I demonstrated Azure Role-Based Access Control (RBAC) by reviewing role definitions, creating role assignments and configuring a custom role.
+
+I reviewed subscription-level role assignments and built-in role permissions. I then configured role assignments at resource-group scope using the Reader and Virtual Machine Contributor built-in roles.
+
+I also created a custom role named **VM Operator - Limited**, with permissions to read, start and restart virtual machines. The role does not grant permission to delete virtual machines or assign roles.
+
+Finally, I assigned the custom role to Tinashe Sibanda at the `rg-rbac-lab` resource-group scope and verified the assignment in Azure.
+
+---
+
+## Screenshots
+
+### Subscription Role Assignments
+
+Shows the Owner role assignment at subscription scope.
+
+![Subscription Role Assignments](screenshots/01-rbac-subscription-role-assignments.png)
+
+### Built-in Role Permissions
+
+Shows the permissions associated with the built-in Owner role.
+
+![Built-in Role Permissions](screenshots/02-rbac-built-in-roles.png)
+
+### Resource Group Role Assignments
+
+Shows the built-in and custom Azure RBAC roles created and assigned to the respective user accounts at the `rg-rbac-lab` resource-group scope, including Reader, Virtual Machine Contributor and VM Operator - Limited.
+
+![Resource Group Role Assignments](screenshots/03-rbac-resource-group-role-assignments.png)
+
+### Custom Role Creation
+
+Shows the successful creation of the VM Operator - Limited custom role.
+
+![Custom Role Creation](screenshots/04-rbac-custom-role-created.png)
+
+### Custom Role Permissions and Assignment
+
+Shows the three permissions configured for the custom role and its assignment to Tinashe Sibanda.
+
+![Custom Role Permissions and Assignment](screenshots/05-rbac-role-assignments.png)
