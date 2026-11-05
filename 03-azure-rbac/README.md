@@ -2,11 +2,7 @@
 
 ## Overview
 
-In this project I demonstrated Azure Role-Based Access Control (RBAC) by reviewing role definitions, examining subscription-level permissions, creating a resource group and configuring role assignments at resource-group scope.
-
-I assigned built-in roles to different user accounts, including Reader and Virtual Machine Contributor. I also created a custom role named **VM Operator - Limited**, granting permission to view, start and restart virtual machines without permission to delete virtual machines or assign roles.
-
-Finally, I assigned the custom role to Tinashe Sibanda and verified the role assignment under the `rg-rbac-lab` resource group.
+I demonstrated Azure Role-Based Access Control (RBAC) by reviewing role definitions, examining subscription-level permissions, creating a resource group and configuring role assignments at resource group scope. I assigned built-in roles to different user accounts, including Reader and Virtual Machine Contributor. I also created a custom role named **VM Operator - Limited**, granting permission to view, start and restart virtual machines without permission to delete virtual machines or assign roles and assigned it Tinashe Sibanda and verified the role assignment under the `rg-rbac-lab` resource group.
 
 ---
 
