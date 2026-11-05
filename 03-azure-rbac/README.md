@@ -36,4 +36,4 @@ Shows the creation of the VM Operator - Limited custom role with permissions to 
 
 Shows the VM Operator - Limited role assigned to Tinashe Sibanda at the resource-group scope.
 
-![Custom Role Assignment](screenshots/05-rbac-role-assignments.png)
+![Custom Role Assignment](screenshots/05-rbac-custom-role-assignment.png)
