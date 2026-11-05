@@ -12,7 +12,7 @@ I demonstrated Azure Role-Based Access Control (RBAC) by reviewing role definiti
 
 Shows the Owner role assignment inherited at subscription scope.
 
-![Subscription Role Assignments](screenshots/01-rbac-subscription-role-assignments.png)
+![Subscription Role Assignments](screenshots/01-rbac-subscription-role-assignment.png)
 
 ### Built-in Role Permissions
 
