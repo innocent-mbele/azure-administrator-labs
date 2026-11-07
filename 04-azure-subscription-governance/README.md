@@ -44,7 +44,7 @@ Shows the deployed VM in the Running state.
 
 Shows overall subscription compliance and the separate ASC Default initiative findings.
 
-![Azure Policy Compliance Dashboard](screenshots/06-azure-sub-policy-compliance-dashboard.png)
+![Azure Policy Compliance Dashboard](screenshots/06–azure-sub-policy-compliance -dashboard.png)
 
 ### Tag Policy Compliance
 
