@@ -44,7 +44,7 @@ Shows the deployed virtual machine and its configuration in the Azure Portal.
 
 Shows the Azure Policy compliance dashboard and the compliance overview for the resource group.
 
-![Azure Policy Compliance Dashboard](screenshots/06–azure-sub-policy-compliance -dashboard)
+![Azure Policy Compliance Dashboard](screenshots/06–azure-sub-policy-compliance-dashboard)
 
 ### Require a Tag Policy
 
