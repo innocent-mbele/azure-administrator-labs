@@ -2,64 +2,76 @@
 
 ## Overview
 
-I demonstrated Azure subscription governance by inspecting subscription and resource-group details, assigning the built-in **Require a tag on resources** Azure Policy and verifying compliance.
+I demonstrated Azure Subscription Governance by reviewing the Azure subscription, examining subscription and resource group configurations, and implementing Azure Policy to enforce resource tagging requirements. I created a policy assignment named **Require a tag on resources** at the `rg-rbac-lab` resource group scope, requiring resources to have the `Environment=Lab` tag. I deployed and configured an Ubuntu virtual machine and its supporting infrastructure, including a network interface, network security group, virtual network and managed OS disk. I verified the policy compliance results using the Azure Portal, Azure CLI and PowerShell, confirming that all five infrastructure resources were compliant.
 
-I assigned the policy to `rg-rbac-lab` with the required tag `Environment = Lab` and the **Deny** effect. I deployed an Ubuntu virtual machine and applied the tag to its associated resources. I confimed all seven evaluated resources were compliant using Azure Portal and PowerShell. 
+I also implemented automated virtual machine shutdown using Azure Automation. I created an Automation Account named `aa-rbaclab-shutdown`, configured its system-assigned managed identity and assigned the **Virtual Machine Contributor** role at the target virtual machine scope. I published a PowerShell runbook named **Shutdown-VM-Daily-UAE** and configured three daily schedules at 2:00 AM, 5:00 PM and 10:00 PM using the `Asia/Dubai` time zone. I manually executed the runbook, verified that the Automation job completed successfully and confirmed that the virtual machine reached the `PowerState/deallocated` state.
 
 ---
 
 ## Screenshots
 
-### Subscription Overview
+### Subscription Login and Overview
 
-Shows Azure CLI login and the active subscription.
+Shows the Azure CLI login, active account and subscription information.
 
-![Subscription Overview](screenshots/01-azure-sub-cli-login-subscription-overview.png)
+![Subscription Login and Overview](screenshots/01-azure-sub-cli-login-subscription-overview.png)
 
-### Subscription Queries
+### Subscription JSON and CLI Queries
 
-Shows subscription details in JSON format and a JMESPath query.
+Shows subscription information retrieved in JSON format and Azure CLI queries used to inspect subscription details.
 
-![Subscription Queries](screenshots/02-azure-sub-subscription-json-and-cli-queries.png)
+![Subscription JSON and CLI Queries](screenshots/02-azure-sub-subscription-json-and-cli-queries.png)
 
-### Resource Group Governance
+### Subscription and Resource Group Governance
 
-Shows subscription and resource-group inspection, including the management-group permission limitation.
+Shows the subscription and resource group governance configuration.
 
-![Resource Group Governance](screenshots/03-azure-subscription-and-resource-group-governance.png)
+![Subscription and Resource Group Governance](screenshots/03-azure-subscription-and-resource-group-governance.png)
 
-### VM Deployment
+### VM Deployment Success
 
-Shows the successful deployment of the Ubuntu virtual machine.
+Shows the successful deployment of the virtual machine and its supporting Azure infrastructure.
 
-![VM Deployment](screenshots/04-azure-sub-policy-vm-deployment-success.png)
+![VM Deployment Success](screenshots/04-azure-sub-policy-vm-deployment-success.png)
 
-### VM Running
+### VM Running Overview
 
-Shows the deployed VM in the Running state.
+Shows the deployed virtual machine and its configuration in the Azure Portal.
 
-![VM Running](screenshots/05-azure-sub-policy-vm-running-overview.png)
+![VM Running Overview](screenshots/05-azure-sub-policy-vm-running-overview.png)
 
 ### Azure Policy Compliance Dashboard
 
-Shows overall subscription compliance and the separate ASC Default initiative findings.
+Shows the Azure Policy compliance dashboard and the compliance overview for the resource group.
 
-![Azure Policy Compliance Dashboard](screenshots/06–azure-sub-policy-compliance -dashboard.png)
+![Azure Policy Compliance Dashboard](screenshots/06-azure-sub-policy-compliance-dashboard.png)
 
-### Tag Policy Compliance
+### Require a Tag Policy
 
-Shows the **Require a tag on resources** policy at 100% compliance (7 of 7 resources).
+Shows the configured Require a tag on resources policy assignment and its compliance information.
 
-![Tag Policy Compliance](screenshots/07-azure-sub-policy-require-tag-compliance.png)
+![Require a Tag Policy](screenshots/07-azure-sub-policy-require-tag-compliance.png)
 
-### Resource Compliance
+### Individual Resource Compliance
 
-Shows the seven individual resources marked Compliant.
+Shows the individual resources evaluated against the Require a tag on resources policy, including their compliance results.
 
-![Resource Compliance](screenshots/08-azure-sub-policy-require-tag-resource-compliance.png)
+![Individual Resource Compliance](screenshots/08-azure-sub-policy-require-tag-resource-compliance.png)
 
-### PowerShell Verification
+### PowerShell Policy Compliance Verification
 
-Shows PowerShell confirming seven compliant resources and zero non-compliant resources for the tag policy assignment.
+Shows the use of PowerShell to retrieve and inspect Azure Policy compliance results.
 
-![PowerShell Verification](screenshots/09-azure-sub-policy-powershell-compliance-verification.png)
+![PowerShell Policy Compliance Verification](screenshots/09-azure-sub-policy-powershell-compliance-verification.png)
+
+### Automated VM Shutdown Schedules
+
+Shows the three enabled daily shutdown schedules associated with the `Shutdown-VM-Daily-UAE` runbook, configured for 2:00 AM, 5:00 PM and 10:00 PM using Gulf Standard Time (UAE time).
+
+![Automated VM Shutdown Schedules](screenshots/10-azure-sub-automation-shutdown-configuration.png)
+
+### Automated VM Shutdown Verification
+
+Shows the successful execution of the `Shutdown-VM-Daily-UAE` runbook, including the completed Azure Automation job and its execution details. The VM's final `PowerState/deallocated` state was independently verified using PowerShell.
+
+![Automated VM Shutdown Verification](screenshots/11-azure-sub-automation-shutdown-verification.png)
