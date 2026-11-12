@@ -2,9 +2,9 @@
 
 ## Overview
 
-I reviewed the Azure subscription, examined subscription and resource group configurations and implemented Azure Policy to enforce resource tagging requirements. Then created a policy assignment named **Require a tag on resources** at the `rg-rbac-lab` resource group scope requiring resources to have the `Environment=Lab` tag. I then deployed and configured an Ubuntu virtual machine and its supporting infrastructure including a network interface, network security group, virtual network and managed OS disk. Verified the policy compliance results using the Azure Portal, Azure CLI and PowerShell confirming that all five infrastructure resources were compliant.
+I reviewed the Azure subscription, examined subscription and resource group configurations and implemented Azure Policy to enforce resource tagging requirements. Then created a policy assignment named Require a tag on resources at the rg-rbac-lab resource group scope requiring resources to have the Environment=Lab tag. I then deployed and configured an Ubuntu virtual machine and its supporting infrastructure including a network interface, network security group, virtual network and managed OS disk. Verified the policy compliance results using the Azure Portal, Azure CLI and PowerShell confirming that all five infrastructure resources were compliant.
 
-Also implemented automated virtual machine shutdown using Azure Automation and created an Automation Account named `aa-rbaclab-shutdown`, configured its system-assigned managed identity and assigned the **Virtual Machine Contributor** role at the target virtual machine scope. I published a PowerShell runbook named **Shutdown-VM-Daily-UAE** and configured three daily schedules at 2:00 AM, 5:00 PM and 10:00 PM using the `Asia/Dubai` time zone. 
+Also implemented automated virtual machine shutdown using Azure Automation and created an Automation Account named aa-rbaclab-shutdown, configured its system-assigned managed identity and assigned the Virtual Machine Contributor role at the target virtual machine scope. I published a PowerShell runbook named Shutdown-VM-Daily-UAE and configured three daily schedules at 2:00 AM, 5:00 PM and 10:00 PM using the Asia/Dubai time zone. 
 
 ---
 
