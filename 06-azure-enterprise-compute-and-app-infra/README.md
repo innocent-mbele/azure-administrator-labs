@@ -62,7 +62,7 @@ Shows the deployment of PostgreSQL 16 using Docker Compose as the database servi
 
 ### Enterprise Portal Database
 
-Shows the creation and verification of the dedicated `enterprise_portal` database and its application database account.
+Shows the creation and verification of the dedicated enterprise_portal database and its application database account.
 
 ![Enterprise Portal Database](screenshots/09-azure-compute-enterprise-portal-database.png)
 
@@ -74,12 +74,12 @@ Shows the deployed Flask application and the verification of its health endpoint
 
 ### Enterprise Management Portal Dashboard
 
-Shows the Enterprise Management Portal dashboard running in Firefox inside the Ubuntu virtual machine. The application is accessed locally through `127.0.0.1:8080`.
+Shows the Enterprise Management Portal dashboard running in Firefox inside the Ubuntu virtual machine. The application is accessed locally through 127.0.0.1:8080.
 
 ![Enterprise Portal Dashboard](screenshots/11-azure-compute-enterprise-portal-dashboard.png)
 
 ### Final Enterprise Application NSG Inbound Rules
 
-Shows the custom and default inbound security rules configured on `nsg-enterprise-app-01`, including SSH access, internal HTTPS, Azure Bastion RDP access and the additional inbound traffic restriction.
+Shows the custom and default inbound security rules configured on nsg-enterprise-app-01, including SSH access, internal HTTPS, Azure Bastion RDP access and the additional inbound traffic restriction.
 
 ![Enterprise Application NSG Inbound Rules](screenshots/12-azure-compute-enterprise-application-nsg-inbound-rules.png)
