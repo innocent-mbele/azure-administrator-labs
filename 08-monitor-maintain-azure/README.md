@@ -32,7 +32,7 @@ Shows the successful Register Resource Provider operation recorded in Azure Acti
 
 ### DDoS Public IP Error Investigation
 
-Shows the investigation of a failed DDoS protection status operation and the PublicIpNotConnectedToBackend error reported by Azure.
+Shows the investigation of a failed DDoS protection status operation and the PublicIpNotConnectedToBackend error reported by Azure
 
 ![DDoS Public IP Error Investigation](screenshots/05-monitor-maintain-azure-ddos-public-ip-error-investigation.png)
 
