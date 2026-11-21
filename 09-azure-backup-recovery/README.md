@@ -17,7 +17,7 @@ Shows the Recovery Services vault rsv-azure-backup-01 deployed successfully in E
 
 Shows the backup job history for vm-enterprise-app-01, including successful backup operations and earlier failed and cancelled attempts.
 
-![Azure VM Backup Job Status](screenshots/02-azure-backup-recovery-backup-job-status.png)
+![Azure VM Backup Job Status](screenshots/02-azure-backup-recovery-backup-job-completed.png)
 
 ### Restored OS Managed Disk
 
